@@ -1,0 +1,7 @@
+DEPENDENCIES
+  halloumi-systems-management
+    path: .
+    metadata: true
+
+GRAPH
+  halloumi-systems-management (0.1.1)

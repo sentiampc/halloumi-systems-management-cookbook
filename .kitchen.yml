@@ -1,0 +1,38 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-1604
+    driver_config:
+      image: ubuntu:16.04
+      platform: ubuntu
+  - name: ubuntu-1404
+    driver_config:
+      image: ubuntu:14.04
+      platform: ubuntu
+  - name: centos-7
+    driver_config:
+      image: centos:7
+      platform: rhel
+  - name: centos-6
+    driver_config:
+      image: centos:6
+      platform: rhel
+  - name: amazonlinux-2
+    driver_config:
+      image: amazonlinux:2
+      platform: rhel
+  - name: amazonlinux-1
+    driver_config:
+      image: amazonlinux:1
+      platform: rhel
+
+suites:
+  - name: default
+    run_list:
+      - recipe[halloumi-systems-management]
